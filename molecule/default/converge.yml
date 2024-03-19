@@ -1,8 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
-  become: true
-
-  roles:
-    - role: vector-role  
+  tasks:
+    - name: "Include molecule"
+      include_role:
+        name: "molecule"
